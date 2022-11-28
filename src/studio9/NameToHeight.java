@@ -21,7 +21,17 @@ public class NameToHeight {
 		Scanner in = new Scanner(System.in);
 
 		// FIXME
-		throw new NotYetImplementedException();
+		Map<String, Double> nameToHeight = new HashMap<>();
+		nameToHeight.put("a", 1.7);
+		nameToHeight.put("b", 1.8);
+		nameToHeight.put("c", 1.85);
+		String input = "";
+		while(!input.equals("quit")) {
+			input = in.next();
+			if(nameToHeight.containsKey(input)) {
+				System.out.println(input+" : "+nameToHeight.get(input));
+			}
+		}
 
 	}
 }
